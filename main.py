@@ -26,6 +26,11 @@ def main():
                 sys.exit()
         
         # Events
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_RIGHT] or keys[pygame.K_d]:
+            pl.sprite.move_right()
+        if keys[pygame.K_LEFT] or keys[pygame.K_a]:
+            pl.sprite.move_left()
 
         # Update Sprites
         pl.update()
